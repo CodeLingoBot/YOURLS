@@ -184,7 +184,7 @@ function yourls_url_exists( $url ) {
 	$url_exists = $ydb->fetchObject("SELECT * FROM `$table` WHERE `url` = :url", array('url'=>$url));
 
     if ($url_exists === false) {
-        $url_exists = NULL;
+        $url_exists = null;
     }
 
 	return yourls_apply_filter( 'url_exists', $url_exists, $url );
